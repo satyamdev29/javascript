@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Book List</title>
+    <style>
+        .read{background:red;}
+    </style>
+</head>
+<body>
+
+    	<div id="app">
+                <h2> My Book List </h2>
+                <ul>
+                
+                </ul>
+         </div>
+
+    <script>
+    var books = [
+    {
+      title: 'The Design of EveryDay Things',
+      author: 'Don Norman',
+      alreadyRead: false
+    }, {
+      title: 'The Most Human Human',
+      author: 'Brian Christian',
+      alreadyRead: true
+    }
+    , {
+      title: 'Born To Win',
+      author: 'Satyam',
+      alreadyRead: true
+    }
+  ];
+  
+  //const handleBookList = document.getElementById('app').lastElementChild
+  const handleBookList = document.getElementById('app').lastElementChild
+    books.forEach(function(book){
+        const li = document.createElement('li')
+        if (book.alreadyRead == true)
+        {
+            li.className='read'
+            li.textContent = "Title: "+book.title +"    Author :" +book.author    // <li> Book Name </li>
+            handleBookList.appendChild(li)
+        }else{
+            li.textContent = "Title: "+book.title +"    Author :" +book.author    // <li> Book Name </li>
+            handleBookList.appendChild(li)
+        }
+        
+    })  
+    </script>
+    
+</body>
+</html>

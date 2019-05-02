@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Guess Game</title>
+    </head>
+    <bod>
+        <script>
+           const getYourName = prompt("Enter your Name")
+            console.log(getYourName)
+            const targetNumber = Math.ceil(Math.random()*100)
+            console.log(targetNumber)
+            const maxGuess = 10;
+            for(let playerGuess=0; playerGuess<=maxGuess; playerGuess++){
+                const guessNumber = Number(prompt("Guess my number. "+"Total guess is "+playerGuess+" Out of "+maxGuess))
+                if(guessNumber<targetNumber){
+                    console.log('OOPS!!! Your guess was low')
+                }else if(guessNumber>targetNumber){
+                    console.log('OOPS!!! Your guess was High')
+                }else{
+                    console.log('Good job' + getYourName +'! you guess my number')
+                    break;
+                }
+                if(maxGuess==playerGuess){
+                console.log("Sorry you didn't get my number. My number was " + targetNumber)
+            }   
+            }
+            
+            
+        </script>
+    </bod>
+</html>

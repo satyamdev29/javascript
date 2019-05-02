@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Count</title>
+    <style>
+    textarea{
+        width: 300px;
+        padding: 5px;
+        height: 150px;;
+    }
+    </style>
+</head>
+<body>
+        <h2>Word Count</h2>
+        <textarea name="text" id="text" placeholder="This is a word count program"></textarea>
+        <p>You have written <span id="word">0</span> words and <span id="char"> 0 </span> characters</p>
+<script>
+const wordHandle = document.getElementById('word')
+const charHandle  = document.getElementById('char')
+const textHandle  = document.getElementById('text')
+textHandle.addEventListener('keyup', function(){
+    charHandle.innerHTML= textHandle.value.length
+    wordHandle.innerHTML=textHandle.value.split(' ').length
+
+
+//console.log((textHandle.value).length)
+})
+</script>
+
+</body>
+</html>

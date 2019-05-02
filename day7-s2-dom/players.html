@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dream 11</title>
+</head>
+<body>
+    <h2>Listing Players - 1<span id="count"></span></h2>
+    <ul id="list">
+        
+    </ul>
+    <script>
+        const players = ['sachin', 'dhoni', 'virat', 'rahul', 'saurav', 'jadeha', 'yuraj', 'kumble', 'aswin', 'zaheer', 'srinath']
+        const countHandle = document.getElementById('count')
+        const listHandle = document.getElementById('list')
+        countHandle.innerHTML = players.length
+
+        // Sort players name
+        // players.sort().forEach(function(playerName){
+        //     const li = document.createElement('li') // <li></li>
+        //     li.textContent = playerName // <li> Player Name </li>
+        //     listHandle.appendChild(li)
+        // })
+        players.forEach(function(playerName){
+            const li = document.createElement('li') // <li></li>
+            li.textContent = playerName // <li> Player Name </li>
+            listHandle.appendChild(li)
+        })
+
+
+    </script>
+    
+</body>
+</html>

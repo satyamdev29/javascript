@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Counter</title>
+</head>
+
+<body>
+    <h1 id="count">0</h1><br/>
+    <button id="upBtn">UP</button><button  id="downBtn">DOWN</button><button  id="resetBtn">RESET</button>
+    <script type="text/javascript">
+    const upBtnHandle = document.getElementById('upBtn')
+    const downBtnHandle = document.getElementById('downBtn')
+    const resetBtnHandle = document.getElementById('resetBtn')
+    const countHandle = document.getElementById('count')
+    let countValue = 0
+    upBtnHandle.addEventListener('click', function(){
+        countValue++
+        countHandle.innerHTML = countValue
+    })
+
+    downBtnHandle.addEventListener('click', function(){
+        countValue--
+        countHandle.innerHTML = countValue
+    })
+    resetBtnHandle.addEventListener('click', function(){
+        countValue=0
+        countHandle.innerHTML = countValue
+    })
+    </script>
+</body>

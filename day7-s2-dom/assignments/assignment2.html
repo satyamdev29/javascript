@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8"/>
+      <title>About Me</title>
+      <style>.list-item{
+          background:#ff0000;
+      }</style>
+    </head>
+    <body>
+      <h1>About Me</h1>
+      
+      <ul>
+        <li>Nickname: <span id="nickname"></span>
+        <li>Favorites:  <span id="favorites"></span>
+        <li>Hometown: <span id="hometown"></span>
+      </ul>
+      <script>
+        document.body.style.fontFamily = 'Arial, sans-serif'
+        var items = document.getElementsByTagName('li')[0]
+            items.setAttribute("class", "list-item")
+        
+        const getNickName = document.getElementById('nickname')
+        const getfavorites = document.getElementById('favorites')
+        const getHometown = document.getElementById('hometown')
+
+        const aboutMe = {
+            nickname : 'Satyam Mishra',
+            favorites : 'Painting & Dancing',
+            hometown : 'Varanasi'
+        }
+        console.log(aboutMe.nickname)
+        // loop over an object
+for (const myinfo in aboutMe){
+    console.log( aboutMe[myinfo])
+    getNickName.innerHTML=aboutMe.nickname
+    getfavorites.innerHTML=aboutMe.favorites
+    getHometown.innerHTML=aboutMe.hometown
+}
+      </script>
+    </body>
+  </html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> List of HTML Tags </title>
+    </head>
+    <body>
+        <!-- presentation tags -->
+        <h1>Header 1 </h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+
+        <!-- ordered list -->
+        <ol>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ol>
+
+        <!-- unordered List -->
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+
+        <!-- paragraph -->
+        <p>this is a paragraph tag</p>
+
+        <!-- divison  -->
+        <div>
+            <p>para inside div</p>
+            <ul>
+                <li> item 1</li>
+            </ul>
+        </div>
+
+        <!-- table -->
+        <table>
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th> name </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 1 </td>
+                    <td> item 1</td> 
+                </tr>
+                <tr>
+                    <td> 2 </td>
+                    <td> item 2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- anchor -->
+        <a href="http://www.google.com">visit google</a> 
+        <a href="http://www.facebook.com" target="_blank">visit facebook</a>
+        <a href="another.html"> Another Web Page</a>
+        <a href="./products/single-product-info.html"> Single product Web Page</a>
+
+        <hr/>
+
+        <!-- forms -->
+        <h2>Forms</h2>
+        <form>
+            <label>
+                text field 
+                <input type="text" required placeholder="enter your name" autofocus/>
+            </label> <br/>
+
+            <label for="numberField"> number field </label>
+            <input type="number" id="numberField" /> <br/>
+
+            <label>
+                email field
+                <input type="email" />
+            </label> <br />
+
+            <label>
+                password field
+                <input type="password" />
+            </label> <br />
+
+            <label>
+                date field
+                <input type="date" />
+            </label> <br />
+
+            <label>
+                Drop Down
+                <select>    
+                    <option value=''>select</option>
+                    <option value='1'>option 1</option>
+                    <option value='2'>option 2</option>
+                </select>
+            </label> <br />
+
+            <label>
+                Drop Down multiselect
+                <select multiple>
+                    <option value=''>select</option>
+                    <option value='1'>option 1</option>
+                    <option value='2'>option 2</option>
+                    <option value='3'>option 3</option>
+                    <option value='4'>option 4</option>
+                </select>
+            </label> <br />
+
+            <label>
+                text area
+                <textarea> </textarea>
+            </label> <br />
+
+            <label>
+                check box
+                <input type="checkbox"  />
+            </label> <br />
+
+            <label>
+                check box (pre checked)
+                <input type="checkbox" checked />
+            </label> <br />
+
+            <label>
+                check box (pre checked and disabled)
+                <input type="checkbox" checked disabled />
+            </label> <br />
+
+            <label>
+                radio button
+            </label>
+            <label>
+                <input type="radio" name="radioValue" /> option 1
+            </label>
+            <label>
+                <input type="radio" name="radioValue"  /> option 2
+            </label>
+            <br />
+
+            <label>
+                file upload
+                <input type="file" />
+            </label> <br />
+
+            <input type="submit" /> or <input type="reset" />
+        </form> 
+        <hr/>
+
+        <button> submit</button>
+
+        <!-- multi media tags  -->
+        <img src="images/dct-final-academy.jpg" alt="dct academy logo"/>
+        <!-- <video src="videos/react-router.webm" controls /> -->
+
+        <!-- text decoration tags -->
+
+        <ul>
+            <li><em>item 1</em></li>
+            <li><s>item 3</s></li>
+            <li><u>item 3</u></li>
+            <li><b>item 4</b></li>
+            <li><small>item 5</small></li>
+        </ul>
+
+        <!-- span help tag - can be used inside other tags presentation -->
+        <h2>Listing Items - <span> 4 </span></h2>
+
+        <script>
+            console.log('this is javascript')
+        </script>
+    </body>
+</html>

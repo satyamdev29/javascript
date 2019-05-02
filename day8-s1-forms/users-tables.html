@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listing Users</title>
+</head>
+<body>
+    <h2>Listing Users</h2>
+    <ul id="list"></ul>
+    <table id="list">
+        <thead>
+            <th>#</th>
+            <th>Name</th>
+            <th>User</th>
+            <th>Email</th>
+        </thead>
+    </table>
+    <script>
+        const listHandle = document.getElementById('list')
+        const xhr = new XMLHttpRequest()
+        // Http Methods = GET(READ) POST(CREATE) PUT(UPDATE) DELETE(DESTROY)
+        xhr.open('GET', 'http://jsonplaceholder.typicode.com/users')
+        xhr.send()
+        xhr.onload = function(){
+            // json type is string - inside can be an object
+            console.log(typeof xhr.responseText)
+            const users = JSON.parse(xhr.responseText) // Parsing json data string to object as xhr response will get as string.
+            users.forEach(function(user){
+                const li = document.createElement('li') // <li> </li>
+                // li.textContent
+
+                const text = document.createTextNode(user.name) // text
+                li.appendChild(text) // <li> text </li>
+                listHandle.appendChild(li) // <ul><li>text</li></ul>
+
+            })
+        }
+
+    </script>
+</body>
+</html>
