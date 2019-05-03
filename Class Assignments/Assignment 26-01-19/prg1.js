@@ -8,8 +8,8 @@ a.forEach(function(getList){
 function printArray(getList) {
     //return console.log((getList.length));
     for( let i = 0; i<=getList.length; i++){
-        for (let j=0; j<=i; j++){
-            return i[j];
+        for (let j=i; j<=getList.length; j++){
+            return (getList[i][j]);
         }
     }
     
