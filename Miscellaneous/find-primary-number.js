@@ -1,3 +1,4 @@
+// Print Prime number
 function printPrime(limit) {
     var i = 0;
     var j = 0;
