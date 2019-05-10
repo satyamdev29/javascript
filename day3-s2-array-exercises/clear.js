@@ -11,12 +11,12 @@ function clearArray(values) {
     return output
 }
 
-const result = clearArray([NaN, 0, 15, false, -22, '', undefined, 47, null])
+const result = clearArray([NaN, 0, 15, false, -22, '', undefined, 47, null, true, 1])
 // [15, -22, 47]
 console.log(result)
 
 
-// truthy values - !falsy - [], {}
+// truthy values - !falsy - [], {}, true, 1
 // falsy values - NaN, 0, false, '', undefined, null 
 
 // const values = [NaN, 0, 15, false, -22, '', undefined, 47, null, [], {}, true, 1]
