@@ -1,4 +1,7 @@
 function clearArray(values) {
+    if(values.length==0){
+        return 'Invalid input'
+    }
     const output = []
     for(let i = 0; i < values.length; i++ ){
         if(values[i]) {
